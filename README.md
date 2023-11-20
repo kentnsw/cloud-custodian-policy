@@ -2,6 +2,7 @@
 
 - [01 Why Cloud Custodian](docs/01-why-cloud-custodian.md)
 - [02 Streamlining Cloud Custodian](docs/02-streamlining-cloud-custodian.md)
+- [03 Designing and Testing EBS Snapshot Cleanup Policy](docs/03-designing-and-testing-ebs-snapshot-cleanup-policy.md)
 
 ## Quick Start
 
