@@ -19,6 +19,8 @@ policies:
         skip-ami-snapshots: true
 ```
 
+*source: aws/policies/ebs-snapshot-cleanup-lite.yml*
+
 ### Building Automated Test Cases
 
 Recognizing the importance of robust testing, especially for those destructive actions like deletion, we began building automated test cases using the popular testing frameworks. The example Python test case creates an EC2 volume, takes snapshots at different time intervals, and tests the policy against these snapshots. We used the `freeze_time` library to simulate the passage of time for testing different age conditions.
@@ -49,6 +51,8 @@ def test_delete_old_snapshots(test: CustodianTesting):
                 s["SnapshotId"] for s in res if s["OwnerId"] == "123456789012"
             ]
 ```
+
+*source: tests/aws/test_ebs-snapshot-cleanup-lite.py*
 
 ### Prioritizing Safety in Testing
 
