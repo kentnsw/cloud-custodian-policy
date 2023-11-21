@@ -12,15 +12,16 @@ from c7n.testing import PyTestUtils, reset_session_cache
 
 
 class CustodianTesting(PyTestUtils):
-    def _load_policies(self, path) -> List[PolicyCollection]:
+    def _load_policies(self, path, vars: dict = {}) -> List[PolicyCollection]:
         root_dir = f"{os.path.abspath(__file__)[:-11]}/../../"
         config = {"output_dir": "logs", "account_id": "123456789012"}
+        config.update(**vars)
         e = Config.empty(**config)
         return policy_load(e, root_dir + path, vars=config)
 
-    def run_policies(self, path) -> list[list]:
+    def run_policies(self, path, vars: dict = {}) -> list[list]:
         result = []
-        for p in self._load_policies(path):
+        for p in self._load_policies(path, vars):
             result.append(p.run())
         return result
 

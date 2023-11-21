@@ -2,7 +2,7 @@
 
 ### Designing Policy Structure
 
-Today, we focused on designing a simple yet effective policy for cleaning up old EBS snapshots in AWS. Following a clear naming convention, we decided to name our policy file as `<resource type>-<policy group purpose>.yml`. Each policy within the file will be named `<resource type>-<policy purpose>`. We created an initial policy example in YAML format, targeting EBS snapshots older than 90 days for deletion, excluding AMI snapshots. The clarity in naming and structuring the policy file ensures a predictable and manageable resource organization and makes it easy to locate relevant policies in the future.
+Today, we focused on designing a simple yet effective policy for cleaning up old EBS snapshots in AWS. Following a clear naming convention, we decided to name our policy file as `<resource type>-<policy group purpose>.yml`. Each policy within the file will be named `<resource type>-<policy purpose>`. We created an initial policy example in YAML format, targeting EBS snapshots older than 90 days for deletion, excluding AMI snapshots. The clarity in naming and structuring the policy file ensures a predictable and manageable police organization and makes it easy to locate relevant policies in the future.
 
 ```yaml
 policies:

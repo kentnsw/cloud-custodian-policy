@@ -6,7 +6,7 @@ policies:
       - OwnerId: "{account_id}"
       - type: age
         op: gt
-        days: 90
+        days: {ebs_snapshot_retention_days}
     actions:
       - type: delete
         skip-ami-snapshots: true

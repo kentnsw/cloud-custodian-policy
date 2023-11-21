@@ -1,0 +1,36 @@
+vars:
+  ebs_snapshot_retention_days: 90 # default vaule for all accounts
+
+accounts:
+  - account_id: "123456789012"
+    email: my-dev-account@example.com
+    name: my-dev-account
+    regions:
+      - us-east-1
+    role: arn:aws:iam::123456789012:role/CloudCustodianRole
+    tags:
+      - path:/develop
+      - ebs_snapshot_retention_days:7 # specify the customized vaule through tag
+    vars:
+      ebs_snapshot_retention_days: 7 # customized value for this account
+
+  - account_id: "123456789013"
+    email: my-prod-account-1@example.com
+    name: my-prod-account-1
+    regions:
+      - us-east-1
+    role: arn:aws:iam::123456789013:role/CloudCustodianRole
+    tags:
+      - path:/prod
+
+  - account_id: "123456789014"
+    email: my-prod-account-2@example.com
+    name: my-prod-account-2
+    regions:
+      - us-east-1
+    role: arn:aws:iam::123456789014:role/CloudCustodianRole
+    tags:
+      - path:/prod
+      - ebs_snapshot_retention_days:365
+    vars:
+      ebs_snapshot_retention_days: 365

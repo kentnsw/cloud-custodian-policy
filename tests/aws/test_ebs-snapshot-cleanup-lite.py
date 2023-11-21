@@ -6,7 +6,7 @@ from loguru import logger
 
 from aws import EC2
 
-policy_path = "aws/policies/ebs-snapshot-cleanup-lite.yml"
+path = "aws/policies/ebs-snapshot-cleanup-lite.yml"
 
 
 def test_delete_old_snapshots(test: CustodianTesting):
@@ -14,15 +14,16 @@ def test_delete_old_snapshots(test: CustodianTesting):
     vol = ec2.client.create_volume(AvailabilityZone="az1", Size=8)["VolumeId"]
     ss_id1 = ec2.client.create_snapshot(VolumeId=vol)["SnapshotId"]
 
+    vars = {"ebs_snapshot_retention_days": 90}
     with freeze_time(test.travel(days=30)):
         # ensure recent snapshots will not be deleted
-        result = test.run_policies(policy_path)[0]
+        result = test.run_policies(path, vars)[0]
         assert result == []
 
         ss_id2 = ec2.client.create_snapshot(VolumeId=vol)["SnapshotId"]
 
         with freeze_time(test.travel(days=60)):
-            result = test.run_policies(policy_path)[0]
+            result = test.run_policies(path, vars)[0]
             # ensure deleting the right snapshot
             assert len(result) == 1
             assert result[0]["SnapshotId"] == ss_id1
