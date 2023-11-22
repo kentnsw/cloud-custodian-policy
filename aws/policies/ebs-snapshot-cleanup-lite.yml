@@ -5,7 +5,7 @@ policies:
     filters:
       - OwnerId: "{account_id}"
       - type: age
-        op: gt
+        op: greater-than
         days: {ebs_snapshot_retention_days}
     actions:
       - type: delete

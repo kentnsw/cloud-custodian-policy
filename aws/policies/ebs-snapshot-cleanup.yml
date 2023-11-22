@@ -1,0 +1,60 @@
+policies:
+  - name: ebs-snapshot-mark-old-snapshots
+    resource: ebs-snapshot
+    description: Mark and notify owners un-preserved, aged EBS snapshots
+    filters:
+      - tag:c7n_cleanup: absent
+      - tag:c7n_cleanup_preserve: absent
+      - OwnerId: "{account_id}"
+      - type: age
+        op: greater-than
+        days: {ebs_snapshot_retention_days}
+      # NOTE unused means snapshot is not used by launch-template, launch-config, or ami.
+      - type: unused
+        value: true
+    actions:
+      - type: notify
+        subject: AWS EBS Snapshots older than 90 days [{{ account }} - {{ region }}]
+        action_desc: Please attach a "c7n_cleanup_preserve" tag to resources that need to be preserved
+        to:
+          - ops-team@example.com
+        template: default.html
+        transport:
+          type: sqs
+          queue: https://sqs.us-east-1.amazonaws.com/123456789012/CloudCustodianQueue
+      - type: mark-for-op
+        tag: c7n_cleanup
+        days: 14
+        op: delete
+
+  - name: ebs-snapshot-unmark
+    resource: ebs-snapshot
+    description: Remove the tag if EBS snapshots are used or preserved
+    filters:
+      - tag:c7n_cleanup: present
+      - or:
+          - tag:c7n_cleanup_preserve: present
+          - type: unused
+            value: false
+    actions:
+      - type: remove-tag
+        tags: [c7n_cleanup]
+
+  - name: ebs-snapshot-delete-old-snapshots
+    resource: ebs-snapshot
+    description: Delete un-preserved, unused AWS EBS snapshots when the time comes
+    filters:
+      - tag:c7n_cleanup_preserve: absent
+      - tag:preserve_c7n_gc: absent
+      - type: marked-for-op
+        tag: c7n_cleanup
+        op: delete
+      # double check to ensure only old snapshots would be deleted
+      - type: age
+        op: greater-than
+        days: {ebs_snapshot_retention_days}
+      - type: unused
+        value: true
+    actions:
+      - type: delete
+        skip-ami-snapshots: true

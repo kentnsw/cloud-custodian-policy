@@ -58,7 +58,7 @@ policies:
     filters:
       - OwnerId: "{account_id}"
       - type: age
-        op: gt
+        op: greater-than
         days: {ebs_snapshot_retention_days}
     actions:
       - type: delete
@@ -109,4 +109,4 @@ The c7n-org provides a powerful solution for globalizing policies across diverse
 ### References
 
 1. [c7n-org - Support Org-level Vars in Config File](https://github.com/cloud-custodian/cloud-custodian/pull/8033)
-2. [c7n - CLI - Enable Vars Option to Load Vars File](https://github.com/cloud-custodian/cloud-custodian/pull/8035)
+2. [c7n-cli - Enable Vars Option to Load Vars File](https://github.com/cloud-custodian/cloud-custodian/pull/8035)
