@@ -19,7 +19,8 @@ Dive into curated Cloud Custodian code samples, design principles, and philosoph
 - [03 Designing and Testing EBS Snapshot Cleanup Policy](docs/03-designing-and-testing-ebs-snapshot-cleanup-policy.md)
 - [04 Globalize and Localize Policies with c7n-org](docs/04-globalize-and-localize-policies.md)
 - [05 Building a Standardized Process with Enhanced Policies](docs/05-building-a-standardized-process.md)
-- [06 Connect Your Customers]
+- [06 Balances Autonomy and Security](docs/06-balances-autonomy-and-security.md)
+- [07 Connect Your Customers]
 
 ## Quick Start
 
