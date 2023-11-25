@@ -18,13 +18,19 @@ Dive into curated Cloud Custodian code samples, design principles, and philosoph
 - [02 Streamlining Cloud Custodian](docs/journey/02-streamlining-cloud-custodian.md)
 - [03 Designing and Testing EBS Snapshot Cleanup Policy](docs/journey/03-designing-and-testing-ebs-snapshot-cleanup-policy.md)
 - [04 Globalize and Localize Policies with c7n-org](docs/journey/04-globalize-and-localize-policies.md)
-- [05 Building a Standardized Process with Enhanced Policies](docs/journey/05-building-a-standardized-process.md)
+- [05 Building a Standardized Process](docs/journey/05-building-a-standardized-process.md)
 - [06 Balances Autonomy and Security](docs/journey/06-balances-autonomy-and-security.md)
-- [07 Connect Your Customers]
+- [07 Better Notification](docs/journey/07-better-notification.md)
+- [Architecture, Deployment]
+- [Script that policy can't]
+- [Outputs and Auditing]
+- [Metrics and Observability]
+- [Supply Chain Risk]
+- [Sustainability, what's future]
 
 ### Ideas, Policies ann Challenges
 
-- Integrate with Steampipe Compliance Mods
+- [Integrate with Steampipe Compliance Mods]
 
 ## Quick Start
 

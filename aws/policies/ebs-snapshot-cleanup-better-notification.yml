@@ -1,3 +1,16 @@
+vars:
+  notify: &notify
+    type: notify
+    template: default.html
+    slack_template: slack
+    jira_template: nct-snow
+    slack_msg_color: warning
+    jira:
+      project: "{jira_project}"
+    transport:
+      type: sqs
+      queue: https://sqs.us-east-1.amazonaws.com/123456789012/CloudCustodianQueue
+
 policies:
   - name: ebs-snapshot-mark-old-snapshots
     resource: ebs-snapshot
@@ -13,15 +26,15 @@ policies:
       - type: unused
         value: true
     actions:
-      - type: notify
+      - <<: *notify
         subject: AWS ebs-snapshot will be deleted in 14 days [{{ account }} {{ region }}]
-        action_desc: Please attach a "c7n_cleanup_preserve" tag to resources that need to be preserved
+        action_desc: |
+          Please attach a "c7n_cleanup_preserve" tag to resources that need to be preserved.
+          Document: https://my-org.atlassian.net/abc/def
+          Policy: https://github.com/kentnsw/cloud-custodian-policy/blob/main/aws/policies/ebs-snapshot-cleanup-better-notification.yml
         to:
-          - ops-team@example.com
-        template: default.html
-        transport:
-          type: sqs
-          queue: https://sqs.us-east-1.amazonaws.com/123456789012/CloudCustodianQueue
+          - "{slack_alert}"
+          - jira
       - type: mark-for-op
         tag: c7n_cleanup
         days: 14
@@ -56,5 +69,10 @@ policies:
       - type: unused
         value: true
     actions:
+      - <<: *notify
+        subject: AWS ebs-snapshot deleted [{{ account }} {{ region }}]
+        to:
+          - "{slack_notify}"
+        slack_msg_color: good
       - type: delete
         skip-ami-snapshots: true

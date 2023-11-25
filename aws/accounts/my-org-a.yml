@@ -1,5 +1,10 @@
+# NOTE Please keep variables in a-z order.
+
 vars:
   ebs_snapshot_retention_days: 90 # default vaule for all accounts
+  jira_project: AWSOPS # AWS Ops team's Jira project
+  slack_alert: slack://#cloud-custodian-alerts
+  slack_notify: slack://#cloud-custodian-notifications
 
 accounts:
   - account_id: "123456789012"
@@ -13,6 +18,9 @@ accounts:
       - ebs_snapshot_retention_days:7 # specify the customized vaule through tag
     vars:
       ebs_snapshot_retention_days: 7 # customized value for this account
+      jira_project: AWSDEV # tenant team's Jira project
+      slack_alert: slack://#my-dev-account-alerts
+      slack_notify: slack://#my-dev-account-notifications
 
   - account_id: "123456789013"
     email: my-prod-account-1@example.com
@@ -22,6 +30,9 @@ accounts:
     role: arn:aws:iam::123456789013:role/CloudCustodianRole
     tags:
       - path:/prod
+    vars:
+      slack_alert: slack://#my-prod-account-alerts
+      slack_notify: slack://#my-prod-account-notifications
 
   - account_id: "123456789014"
     email: my-prod-account-2@example.com

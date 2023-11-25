@@ -46,7 +46,7 @@ policies:
         value: true
     actions:
       - type: notify
-        subject: AWS EBS Snapshots older than 90 days [{{ account }} - {{ region }}]
+        subject: AWS ebs-snapshot will be deleted in 14 days [{{ account }} {{ region }}]
         action_desc: Please attach a "c7n_cleanup_preserve" tag to resources that need to be preserved
         to:
           - ops-team@example.com
@@ -59,6 +59,8 @@ policies:
         days: 14
         op: delete
 ```
+
+*source: aws/policies/ebs-snapshot-cleanup-process.yml*
 
 During this step, snapshots older than a specified threshold are marked for deletion in 14 days (`c7n_cleanup` tag), and owners are notified via email. To preserve a snapshot, owners need to attach a `c7n_cleanup_preserve` tag.
 
@@ -78,6 +80,8 @@ During this step, snapshots older than a specified threshold are marked for dele
       - type: remove-tag
         tags: [c7n_cleanup]
 ```
+
+*source: aws/policies/ebs-snapshot-cleanup-process.yml*
 
 This policy ensures that snapshots marked for deletion (`c7n_cleanup` tag) are unmarked if they are preserved by the `c7n_cleanup_preserve` tag or inuse. This allows resource owners to retain control over critical snapshots.
 
@@ -103,6 +107,8 @@ This policy ensures that snapshots marked for deletion (`c7n_cleanup` tag) are u
       - type: delete
         skip-ami-snapshots: true
 ```
+
+*source: aws/policies/ebs-snapshot-cleanup-process.yml*
 
 Finally, this policy identifies and deletes unpreserved snapshots that have been marked for deletion. The double-check filter ensures that only snapshots older than the retention period are candidates for deletion.
 
