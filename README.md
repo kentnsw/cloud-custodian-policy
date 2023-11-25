@@ -4,7 +4,7 @@ Welcome to the project, driven by the clarity and productivity boost provided by
 
 ### What to Expect
 
-Dive into curated Cloud Custodian code samples, design principles, and philosophical discussions, arming yourself with the knowledge and tools needed to navigate the intricate world of cloud governance successfully.
+Dive into curated Cloud Custodian code samples, design principles, and philosophical discussions, arming oursleves with the knowledge and tools needed to navigate the intricate world of cloud governance successfully.
 
 ### Key Features
 

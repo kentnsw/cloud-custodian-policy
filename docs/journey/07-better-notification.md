@@ -76,7 +76,7 @@ policies:
 
 ## Tailored Account Configuration
 
-Cloud governance needs are unique, and the solution respects that. By using variables from the account configuration file, you can customize settings at the organization and account levels for maximum flexibility.
+Cloud governance needs are unique, and the solution respects that. By using variables from the account configuration file, we can customize settings at the organization and account levels for maximum flexibility.
 
 ```yaml
 vars:

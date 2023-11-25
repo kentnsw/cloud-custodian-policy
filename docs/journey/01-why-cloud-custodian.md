@@ -18,7 +18,7 @@ Cloud Custodian allows developers to automate compliance checks and policies wit
 
 ### 2. Accessibility
 
-Unlike complex home-grown solutions, Cloud Custodian offers a more straightforward approach. With around 200 lines of code and 150 lines of automated test code, you can implement functionalities like garbage collection for RDS. In contrast, a similar functionality in a home-grown solution would demand around 5000 lines of code and 500 lines of test code. The difference is staggering.
+Unlike complex home-grown solutions, Cloud Custodian offers a more straightforward approach. With around 200 lines of code and 150 lines of automated test code, we can implement functionalities like garbage collection for RDS. In contrast, a similar functionality in a home-grown solution would demand around 5000 lines of code and 500 lines of test code. The difference is staggering.
 
 ### 3. Centralized Governance
 
