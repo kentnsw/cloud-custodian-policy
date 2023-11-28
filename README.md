@@ -30,7 +30,7 @@ Dive into curated Cloud Custodian code samples, design principles, and philosoph
 
 ### Ideas, Policies ann Challenges
 
-- [Integrate with Steampipe Compliance Mods]
+- [A Dive into Steampipe Integration](docs/ideas/steampipe-integration.md)
 
 ## Quick Start
 

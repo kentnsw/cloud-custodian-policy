@@ -8,7 +8,7 @@ One of the main challenges of cloud governance is to balance the autonomy and se
 
 How can we design a cloud governance platform that achieves this balance? We will introduce a design philosophy that uses two concepts: the free zone and the prohibition zone.
 
-<img src="images/journey/autonomy-and-security-zones.png" width=600px>
+<img src="../images/journey/autonomy-and-security-zones.png" width="600px">
 
 ## The Free Zone
 
