@@ -21,7 +21,7 @@ Dive into curated Cloud Custodian code samples, design principles, and philosoph
 1. [Building a Standardized Process](docs/journey/05-building-a-standardized-process.md)
 1. [Balances Autonomy and Security](docs/journey/06-balances-autonomy-and-security.md)
 1. [Better Notification](docs/journey/07-better-notification.md)
-1. [Policies, filters and actions orchestration and consideration]
+1. [Best Practices for Efficient Execution](docs/journey/08-best-practices-for-efficient-execution.md)
 1. [Mailer and its security]
 1. [Architecture, Deployment]
 1. [CI/CD pipeline]
