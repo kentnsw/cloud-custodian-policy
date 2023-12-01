@@ -4,7 +4,7 @@ In this post, we'll delve into the considerations surrounding policy execution, 
 
 ### Executing Policies in a Cluster: A Speedy Approach
 
-When executing policies, the default behavior of Cloud Custodian is to call the AWS API to describe all resources of a given type. This process can be slow, resource-intensive, and potentially costly in terms of API calls. To counteract this, Cloud Custodian provides caching capabilities, with a default caching time of 15 minutes. Thus, to leverage the cache, a proactive approach is to execute sime resource type policies in a cluster manner. Executing policies in a cluster can significantly enhance performance, mitigate API throttling risks, and result in cost savings.
+When executing policies, the default behavior of Cloud Custodian is to call the AWS API to describe all resources of a given type. This process can be slow, resource-intensive, and potentially costly in terms of API calls. To counteract this, Cloud Custodian provides caching capabilities, with a default caching time of 15 minutes. Therefore, to make the most of the cache, a proactive approach is to execute policies for the same resource type in a clustered manner. Executing policies in a cluster can significantly enhance performance, mitigate API throttling risks, and result in cost savings.
 
 ### Filters and Actions Orchestration: A Strategic Sequence
 
