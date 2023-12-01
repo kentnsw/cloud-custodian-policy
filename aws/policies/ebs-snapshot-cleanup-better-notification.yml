@@ -3,7 +3,7 @@ vars:
     type: notify
     template: default.html
     slack_template: slack
-    jira_template: nct-snow
+    jira_template: jira
     slack_msg_color: warning
     jira:
       project: "{jira_project}"

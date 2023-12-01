@@ -14,23 +14,30 @@ Dive into curated Cloud Custodian code samples, design principles, and philosoph
 
 ### Design Journey
 
-- [01 Why Cloud Custodian](docs/journey/01-why-cloud-custodian.md)
-- [02 Streamlining Cloud Custodian](docs/journey/02-streamlining-cloud-custodian.md)
-- [03 Designing and Testing EBS Snapshot Cleanup Policy](docs/journey/03-designing-and-testing-ebs-snapshot-cleanup-policy.md)
-- [04 Globalize and Localize Policies with c7n-org](docs/journey/04-globalize-and-localize-policies.md)
-- [05 Building a Standardized Process](docs/journey/05-building-a-standardized-process.md)
-- [06 Balances Autonomy and Security](docs/journey/06-balances-autonomy-and-security.md)
-- [07 Better Notification](docs/journey/07-better-notification.md)
-- [Architecture, Deployment]
-- [Script that policy can't]
-- [Outputs and Auditing]
-- [Metrics and Observability]
-- [Supply Chain Risk]
-- [Sustainability, what's future]
+1. [Why Cloud Custodian](docs/journey/01-why-cloud-custodian.md)
+1. [Streamlining Cloud Custodian](docs/journey/02-streamlining-cloud-custodian.md)
+1. [Designing and Testing EBS Snapshot Cleanup Policy](docs/journey/03-designing-and-testing-ebs-snapshot-cleanup-policy.md)
+1. [Globalize and Localize Policies with c7n-org](docs/journey/04-globalize-and-localize-policies.md)
+1. [Building a Standardized Process](docs/journey/05-building-a-standardized-process.md)
+1. [Balances Autonomy and Security](docs/journey/06-balances-autonomy-and-security.md)
+1. [Better Notification](docs/journey/07-better-notification.md)
+1. [Policies, filters and actions orchestration and consideration]
+1. [Mailer and its security]
+1. [Architecture, Deployment]
+1. [CI/CD pipeline]
+1. [Event driven policy and deployment optimization]
+1. [Multiple teams collaboration]
+1. [Script that policy can't]
+1. [Change Freeze]
+1. [Outputs and Auditing]
+1. [Metrics and Observability]
+1. [Supply Chain Risk]
+1. [Sustainability, what's future]
 
 ### Ideas, Policies ann Challenges
 
-- [A Dive into Steampipe Integration](docs/ideas/steampipe-integration.md)
+1. [A Dive into Steampipe Integration](docs/ideas/steampipe-integration.md)
+1. [Slack App]
 
 ## Quick Start
 

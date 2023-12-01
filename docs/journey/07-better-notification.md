@@ -24,7 +24,7 @@ policies:
 
 ## Moving Beyond Email
 
-Email fatigue is real, and we've heard you. Instead of inundating tenant's inbox, we're embracing a smarter combination: Slack for immediate alerts and Jira for actionable items. Let's take a closer look at the enhanced notification section.
+Email fatigue is real, and we've heard you. Instead of inundating tenant's inbox, we're embracing a smarter combination: Slack for immediate alerts and Jira for actionable items. Let's take a closer look at the enhanced notification section. Note that the `jira_project` is a variable that can be customized for each account.
 
 ```yaml
 vars:
@@ -32,7 +32,7 @@ vars:
     type: notify
     template: default.html
     slack_template: slack
-    jira_template: nct-snow
+    jira_template: jira
     slack_msg_color: warning
     jira:
       project: "{jira_project}"
