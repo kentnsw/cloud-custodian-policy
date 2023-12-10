@@ -22,7 +22,7 @@ Dive into curated Cloud Custodian code samples, design principles, and philosoph
 1. [Balances Autonomy and Security](docs/journey/06-balances-autonomy-and-security.md)
 1. [Better Notification](docs/journey/07-better-notification.md)
 1. [Best Practices for Efficient Execution](docs/journey/08-best-practices-for-efficient-execution.md)
-1. [Mailer and its security]
+1. [Mailer and Challenging Questions](docs/journey/09-mailer-and-challenging-questions.md)
 1. [Architecture, Deployment]
 1. [CI/CD pipeline]
 1. [Event driven policy and deployment optimization]
@@ -33,6 +33,7 @@ Dive into curated Cloud Custodian code samples, design principles, and philosoph
 1. [Metrics and Observability]
 1. [Supply Chain Risk]
 1. [Sustainability, what's future]
+1. [Cloud Custodian Customization]
 
 ### Ideas, Policies ann Challenges
 

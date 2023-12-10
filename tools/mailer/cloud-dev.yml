@@ -1,0 +1,10 @@
+queue_url: https://sqs.us-west-2.amazonaws.com/123456789012/notification-queue
+from_address: c7n@example.com
+contact_tags: Contact
+
+slack_token: <token that encrypted with a KMS key>
+
+lambda_name: cloud-custodian-mailer
+role: arn:aws:iam::123456789012:role/CloudCustodianMailer
+region: us-ease-1
+lambda_schedule: rate(2 minutes)
