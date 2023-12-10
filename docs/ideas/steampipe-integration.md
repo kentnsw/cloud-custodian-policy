@@ -20,7 +20,7 @@ For instance, consider the integration steps for leveraging Steampipe's AWS Comp
 
     ```yaml
     policies:
-      - name: cis_v200_2_2_1
+      - name: ebs-enable-encryption
         resource: aws.ebs
         filters:
           - type: value
@@ -34,5 +34,16 @@ For instance, consider the integration steps for leveraging Steampipe's AWS Comp
     ```
 
 Integrating with Steampipe immediately opens up huge opportunities. Now, the findings from Steampipe mods can be acted upon, allowing for actions like notification and remediation. This seamless integration provides a streamlined approach to governance, allowing teams to efficiently address compliance issues and take necessary actions without reinventing solutions for common problems like CIS compliance.
+
+Furthermore, to enhance this, we could create a special common filter in Cloud Custodian called `steampipe`. This filter would tightly integrate the Steampipe controls into our policies. The filter's job would be to carry out the specified "control" and then sift through the target EBS volumes for additional filtering or action. The filter could potentially be applicable to all other aws/gcp/azure/etc resources.
+
+```yaml
+    policies:
+      - name: ebs-enable-encryption
+        resource: aws.ebs
+        filters:
+          - type: steampipe
+            control: aws_compliance.control.cis_v200_2_2_1
+```
 
 In summary, making smart software choices, whether through procurement or leveraging tools like Steampipe, allows organizations to optimize their resources and focus on building what truly differentiates them in the market.
