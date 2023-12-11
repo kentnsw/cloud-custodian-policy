@@ -1,0 +1,69 @@
+<mxfile modified="2023-12-11T10:23:16.620Z" host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="G0t3tfPZ6ZP8qStX0-Je" version="22.1.2" type="device">
+  <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
+    <mxGraphModel dx="1114" dy="999" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-2" value="cloud-ops account" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud;strokeColor=#AAB7B8;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="280" width="250" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-7" value="associate to" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;" edge="1" parent="1" source="BqMk5m0cqn1vwSR8IG08-1" target="BqMk5m0cqn1vwSR8IG08-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-9" value="git clone&lt;br&gt;git pull" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BqMk5m0cqn1vwSR8IG08-1" target="BqMk5m0cqn1vwSR8IG08-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-11" value="govern" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BqMk5m0cqn1vwSR8IG08-1" target="BqMk5m0cqn1vwSR8IG08-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-14" value="send msg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BqMk5m0cqn1vwSR8IG08-1" target="BqMk5m0cqn1vwSR8IG08-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="760" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-1" value="c7n-instance" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="506.45" y="420" width="32.9" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-3" value="cloud-custodian-policy" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="318" y="420" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-4" value="Tenant accounts" style="sketch=0;outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_aws_cloud;strokeColor=#AAB7B8;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="740" y="280" width="200" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-5" value="CloudCustodianTenantRole" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#DD344C;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.role;" vertex="1" parent="1">
+          <mxGeometry x="816" y="327.44" width="40" height="22.56" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-8" value="trusted by" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BqMk5m0cqn1vwSR8IG08-6" target="BqMk5m0cqn1vwSR8IG08-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-6" value="CloudCustodianMasterRole" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#DD344C;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.role;" vertex="1" parent="1">
+          <mxGeometry x="502.9" y="327.44" width="40" height="22.56" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-10" value="Cloud Resources" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.resources;fillColor=#759C3E;gradientColor=none;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="819.02" y="420" width="33.96" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="BqMk5m0cqn1vwSR8IG08-12" target="BqMk5m0cqn1vwSR8IG08-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-12" value="c7n-mailer" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="610" y="590" width="38.33" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="BqMk5m0cqn1vwSR8IG08-13" target="BqMk5m0cqn1vwSR8IG08-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-13" value="c7n-message-queue" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" vertex="1" parent="1">
+          <mxGeometry x="502.9" y="590" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-16" value="Jira" style="image;html=1;image=img/lib/atlassian/Jira_Logo.svg;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="816" y="620" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-17" value="Email" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.mail;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="816" y="568" width="40" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="BqMk5m0cqn1vwSR8IG08-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.075;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="BqMk5m0cqn1vwSR8IG08-12" target="BqMk5m0cqn1vwSR8IG08-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

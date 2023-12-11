@@ -12,7 +12,7 @@ accounts:
     name: my-dev-account
     regions:
       - us-east-1
-    role: arn:aws:iam::123456789012:role/CloudCustodianRole
+    role: arn:aws:iam::123456789012:role/CloudCustodianTenantRole
     tags:
       - path:/develop
       - ebs_snapshot_retention_days:7 # specify the customized vaule through tag
@@ -27,7 +27,7 @@ accounts:
     name: my-prod-account-1
     regions:
       - us-east-1
-    role: arn:aws:iam::123456789013:role/CloudCustodianRole
+    role: arn:aws:iam::123456789013:role/CloudCustodianTenantRole
     tags:
       - path:/prod
     vars:
@@ -39,7 +39,7 @@ accounts:
     name: my-prod-account-2
     regions:
       - us-east-1
-    role: arn:aws:iam::123456789014:role/CloudCustodianRole
+    role: arn:aws:iam::123456789014:role/CloudCustodianTenantRole
     tags:
       - path:/prod
       - ebs_snapshot_retention_days:365

@@ -1,0 +1,7 @@
+deployments:
+  - accounts: aws/accounts/my-org-a.yml
+    policies:
+      - aws/policies/ebs-snapshot-cleanup-better-notification.yml
+    output-dir: logs/aws
+    schedule:
+      cron: 0 9 * * 2
