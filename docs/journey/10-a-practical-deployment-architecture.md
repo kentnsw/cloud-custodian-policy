@@ -12,7 +12,7 @@ We could delve into more advanced architectures, such as placing EC2 instances i
 
 To make informed decisions, adopt a systems thinking approach and conduct a comprehensive 360-degree review. Utilizing an analysis model, such as the AWS Well-Architected 6 Pillars, can guide us in choosing the most suitable option.
 
-### Scheduling Policy Execution: Finding the Sweet Spot
+### Scheduling Policy Execution
 
 With the architecture finalized, the next step is scheduling the regular execution of policies. Whether it's once a week at 9 am or during off-hours, it's crucial to align with organizational preferences. Personally, I recommend office hours, given well-tested policies and a gradual rollout procedure.
 
@@ -34,6 +34,6 @@ deployments:
       cron: 0 9 * * 2
 ```
 
-This YAML-based configuration provides a cleaner and more maintainable approach to scheduling policy executions, simplifying our cloud operations journey. We could build more useful feature around the script in the future.
+This YAML-based configuration provides a cleaner and more maintainable approach to scheduling policy executions, simplifying our cloud operations journey. We could build some useful and flexible features around the script in the future.
 
 In conclusion, a well-thought-out deployment architecture coupled with a strategic scheduling approach sets the stage for efficient cloud operations. Balancing simplicity with advanced features and aligning with organizational preferences ensures a robust foundation for managing cloud resources effectively.

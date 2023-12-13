@@ -24,7 +24,7 @@ Dive into curated Cloud Custodian code samples, design principles, and philosoph
 1. [Best Practices for Efficient Execution](docs/journey/08-best-practices-for-efficient-execution.md)
 1. [Mailer and Challenging Questions](docs/journey/09-mailer-and-challenging-questions.md)
 1. [A Practical Deployment Architecture](docs/journey/10-a-practical-deployment-architecture.md)
-1. [CI/CD pipeline]
+1. [CI/CD Pipeline](docs/journey/11-cicd-pipeline.md)
 1. [Event driven policy and deployment optimization]
 1. [Multiple teams collaboration]
 1. [Script that policy can't]

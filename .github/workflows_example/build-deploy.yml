@@ -1,0 +1,48 @@
+name: build-deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    permissions:
+      checks: write
+      contents: read
+      id-token: write
+      pull-requests: write
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          make install
+
+      - name: Test with pytest
+        run: |
+          pytest
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: <AWS_REGION>
+          role-to-assume: <AWS_ROLE_ARN>
+          role-duration-seconds: 1200
+          role-session-name: GitHubActions
+          role-skip-session-tagging: true
+
+      - name: Terraform Init and Apply
+        run: |
+          cd infra/develop
+          terraform init
+          terraform apply -auto-approve

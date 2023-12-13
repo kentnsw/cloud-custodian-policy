@@ -22,7 +22,7 @@ accounts:
     name: my-dev-account
     regions:
       - us-east-1
-    role: arn:aws:iam::123456789012:role/CloudCustodianRole
+    role: arn:aws:iam::123456789012:role/CloudCustodianTenantRole
     tags:
       - path:/develop # This is AWS Organization OU path
   # More accounts go here
