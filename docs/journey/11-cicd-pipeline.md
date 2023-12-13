@@ -7,6 +7,8 @@ A CI/CD pipeline is a process that automates the steps of building, testing, and
 - Unit test: Run automated tests to verify the functionality of individual units of code
 - Deploy: Create the runtime infranstructure
 
+  *source code: .github/workflows_example/build-deploy.yml*
+
 I learned some valuable lessons from using a CI/CD pipeline. Here are some of the best practices that I followed or discovered:
 
 - **Don't put too much logic in the CI/CD pipeline**: Although modern CI/CD tools are powerful and flexible, they are not designed to handle complex logic or tasks. Instead, they are meant to orchestrate the execution of other tools or scripts that can perform those tasks. For example, instead of writing a long and complicated script in the CI/CD tool to perform some custom operation, it is better to write a separate shell script or use another tool that can do the same thing, and then call it from the CI/CD pipeline. This way, the script or tool can be tested and verified locally, and the CI/CD pipeline can remain simple and easy to maintain.
