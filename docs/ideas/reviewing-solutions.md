@@ -21,7 +21,7 @@ Feasibility analysis ensures that the solution is practical and viable. Consider
 - **Cost**: Evaluate the financial implications, including development costs, maintenance, and licensing fees.
 - **Time**: Assess the project timeline and time-to-market.
 - **Resources**: Consider the availability of skilled personnel, hardware, and software resources.
-- **Technology Compatibility**: Ensure that the chosen technology stack aligns with existing systems.
+- **Technology Feasibiity**: Ensure that the chosen technology stack are currently available and mature enough.
 - **Regulatory Compliance**: Verify that the solution adheres to legal and industry standards.
 
 ## 2. **Reviewing the "Ilities"**
