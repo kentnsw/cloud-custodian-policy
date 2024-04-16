@@ -39,6 +39,7 @@ Dive into curated Cloud Custodian code samples, design principles, and philosoph
 
 1. [A Dive into Steampipe Integration](docs/ideas/steampipe-integration.md)
 1. [Reviewing Software Solutions and Architectures](docs/ideas/reviewing-solutions.md)
+1. [From STARs to Constellations](docs/ideas/from-stars-to-constellations.md)
 1. [Slack App]
 1. [Service Quotas Monitoring]
 
